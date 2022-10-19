@@ -8,7 +8,8 @@ pipeline {
         }
         stage ('build') {
             steps {
-                sh """npm install
+                sh """export PATH=/home/ubuntu/.nvm/versions/node/v16.14.0/bin:$PATH
+                      npm install
                       npm run build
                       """
             }
